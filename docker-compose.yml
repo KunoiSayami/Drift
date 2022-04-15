@@ -4,6 +4,8 @@ services:
       context: ./server
       args:
         - NODE_ENV=production
+    volumes:
+      - ./data/:/home/node/.drift/
     container_name: server
     restart: unless-stopped
     user: 1000:1000
